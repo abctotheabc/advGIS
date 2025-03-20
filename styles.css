@@ -1,0 +1,44 @@
+div {
+    background-color: white;
+  }
+  
+  #page-title {
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #animated-train {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  #subway-lines {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  a {
+    color: white;
+  }
+  
+  #subway-lines {
+    position: relative;
+    z-index: 2; /* Make sure this is higher */
+  }
+  
+  #hidden-images {
+    position: relative;
+    z-index: 1; /* Lower index = behind the clickable image */
+    display: none;
+    text-align: center;
+    transform: scale(1);
+  }
+  
+  
