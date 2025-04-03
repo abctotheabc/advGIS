@@ -18,27 +18,84 @@ div {
     font-family: sans-serif;
   }
   
-  #subway-lines {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-  }
   
   a {
     color: white;
   }
   
-  #subway-lines {
-    position: relative;
-    z-index: 2; /* Make sure this is higher */
-  }
   
   #hidden-images {
     position: relative;
-    z-index: 1; /* Lower index = behind the clickable image */
+    z-index: 1; 
     display: none;
     text-align: center;
     transform: scale(1);
   }
+
+/* everything below is new and css code to make the buttons, also the images were originally square so i use border radius to shape the circle */
   
+  .image-button {
+    background: none;
+    text-align: center;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+    position: relative;
+  }
   
+  .image-button img {
+    width: 120px; 
+    text-align: center;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .image-button img:hover {
+    transform: scale(1.05);
+    text-align: center;
+    box-shadow: 0 0 12px 4px rgba(0, 174, 239, 0.6); 
+    justify-content: center;
+    position: relative;
+  }
+  
+  .image-button img.active {
+    box-shadow: 0 0 15px 6px rgba(0, 174, 239, 1);
+    text-align: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .button-row1, .button-row2, .button-row3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.image-button img {
+    border-radius: 60px;
+  }
+
+
+  .image-button img.active {
+    box-shadow: 0 0 15px 6px rgba(0, 174, 239, 1);
+    border-radius: 60px;
+    animation: spin 0.6s linear;
+  }
+  
+/* i legitimately don't understand the last lines below they were purely copy and paste but it looked really cool so i wanted it haha I just don't know what keyframes means */
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

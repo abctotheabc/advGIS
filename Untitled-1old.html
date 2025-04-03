@@ -1,0 +1,159 @@
+<div id="page-title">
+    NYC Subway Lines + Stations
+</div>
+
+<div id="animated-train">
+    <img src="https://cdn.dribbble.com/userupload/20304356/file/original-0d50f9a4da4f587702959a27b7702292.gif"
+        style="width: 25%; height: 25%; display: block; margin-left: auto; margin-right: auto">
+</div>
+
+<h6 style="text-align: center;">
+    (open jsfiddle to widest view for accuracy)
+</h6>
+
+<p style="text-align: center">
+    Click the various metro lines below to see all associated stops.
+</p>
+
+<div id="subway-lines">
+    <img src="https://sarahgrand.wordpress.com/wp-content/uploads/2012/08/subway_lines.jpg" usemap="#image-map">
+</div>
+
+https://transitgifts.com/cdn/shop/products/28255.jpg?v=1559005976
+https://transitgifts.com/cdn/shop/products/28256.jpg?v=1559005976
+https://transitgifts.com/cdn/shop/products/28257.jpg?v=1559005977
+https://transitgifts.com/cdn/shop/products/28259.jpg?v=1559005979
+https://transitgifts.com/cdn/shop/products/28260.jpg?v=1559005980
+https://transitgifts.com/cdn/shop/products/28261.jpg?v=1559005981
+https://transitgifts.com/cdn/shop/products/28262.jpg?v=1559005982
+  
+
+<map name="image-map">
+    <area target="" alt="" title="" href="" coords="102,29,20" shape="circle" onclick="showImage(event, 1); highlightAt(102, 29);">
+    <area target="" alt="" title="" href="" coords="165,31,20" shape="circle" onclick="showImage(event, 2)">
+    <area target="" alt="" title="" href="" coords="224,31,20" shape="circle" onclick="showImage(event, 3)">
+    <area target="" alt="" title="" href="" coords="284,30,20" shape="circle" onclick="showImage(event, 4)">
+    <area target="" alt="" title="" href="" coords="339,32,20" shape="circle" onclick="showImage(event, 5)">
+    <area target="" alt="" title="" href="" coords="403,33,20" shape="circle" onclick="showImage(event, 6)">
+    <area target="" alt="" title="" href="" coords="464,29,20" shape="circle" onclick="showImage(event, 7)">
+    <area target="" alt="" title="" href="" coords="73,88,20" shape="circle" onclick="showImage(event, 8)">
+    <area target="" alt="" title="" href="" coords="133,89,20" shape="circle" onclick="showImage(event, 9)">
+    <area target="" alt="" title="" href="" coords="190,89,20" shape="circle" onclick="showImage(event, 10)">
+    <area target="" alt="" title="" href="" coords="254,89,20" shape="circle" onclick="showImage(event, 11)">
+    <area target="" alt="" title="" href="" coords="311,88,20" shape="circle" onclick="showImage(event, 12)">
+    <area target="" alt="" title="" href="" coords="371,89,20" shape="circle" onclick="showImage(event, 13)">
+    <area target="" alt="" title="" href="" coords="435,89,20" shape="circle" onclick="showImage(event, 14)">
+    <area target="" alt="" title="" href="" coords="493,89,20" shape="circle" onclick="showImage(event, 15)">
+    <area target="" alt="" title="" href="" coords="107,149,20" shape="circle" onclick="showImage(event, 16)">
+    <area target="" alt="" title="" href="" coords="164,147,20" shape="circle" onclick="showImage(event, 17)">
+    <area target="" alt="" title="" href="" coords="224,148,20" shape="circle" onclick="showImage(event, 18)">
+    <area target="" alt="" title="" href="" coords="281,147,20" shape="circle" onclick="showImage(event, 19)">
+    <area target="" alt="" title="" href="" coords="344,148,20" shape="circle" onclick="showImage(event, 20)">
+    <area target="" alt="" title="" href="" coords="402,150,20" shape="circle" onclick="showImage(event, 21)">
+    <area target="" alt="" title="" href="" coords="456,146,20" shape="circle" onclick="showImage(event, 22)">
+</map>
+
+<! all my hidden images below -->
+
+    <div class="hidden-images" id="hidden-images" style="display:none; margin-top: 20px;">
+
+        <img id="1Line" src="1train.png"
+            height="1000" width="300"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="2Line" src="2train.png" height="1200" width="600"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="3Line"
+            src="3train.png"
+            height="600" width="400"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="4Line" src="4train.png"
+            height="1000" width="600"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="5Line" src="5train.png"
+            height="1000" width="600"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="6Line" src="6train.png"
+            height="900" width="400"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="7Line" src="7train.png" 
+            height="700" width="400"
+            style="display: block; margin-left: auto; margin-right: auto">
+
+        <img id="ALine" src="https://new-york.metro-map.net/images/nyc-metro-route-a-8th-avenue-express-map.png"
+            height="400" width="1000"
+            style="transform:rotate(90deg); margin-top: 300px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="BLine" src="https://new-york.metro-map.net/images/nyc-metro-route-b-6th-avenue-express-map.png"
+            height="400" width="800"
+            style="transform:rotate(90deg); margin-top: 210px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="CLine" src="https://new-york.metro-map.net/images/nyc-metro-route-c-8th-avenue-local-map.png"
+            height="400" width="800"
+            style="transform:rotate(90deg); margin-top: 180px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="DLine" src="https://studyusa-log.com/wp-content/uploads/2017/09/6th-avenue-D.png" height="400"
+            width="700"
+            style="transform:rotate(90deg); margin-top: 150px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="ELine" src="https://maps-nyc.com/img/1200/e-train-map-nyc.jpg" height="500" width="1000"
+            style="transform:rotate(90deg); margin-top: 250px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="FLine" src="https://maps-manhattan.com/img/0/f-train-manhattan-map.jpg" height="400" width="800"
+            style="transform:rotate(90deg); margin-top: 240px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="GLine"
+            src="https://i.ytimg.com/vi/xM_NqiTX9cU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AGyCIAC0AWKAgwIABABGF0gZShWMA8=&rs=AOn4CLCc4tbBpgOx9xaSdF39LBOXG3HbUA"
+            height="400" width="600"
+            style="transform:rotate(90deg); margin-top: 150px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="JLine" src="https://maps-nyc.com/img/0/j-train-map.jpg" height="400" width="1000"
+            style="transform:rotate(90deg); margin-top: 350px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="LLine" src="https://new-york.metro-map.net/images/nyc-metro-route-l-14th-street-canarsie-local-map.png"
+            height="400" width="900"
+            style="transform:rotate(90deg); margin-top: 250px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="MLine"
+            src="https://new-york.metro-map.net/images/nyc-metro-route-m-queens-boulevard-6th-avenue-local-map.png"
+            height="400" width="800"
+            style="transform:rotate(90deg); margin-top: 225px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="NLine" src="https://maps-nyc.com/img/0/n-train-map.jpg" height="450" width="900"
+            style="transform:rotate(90deg); margin-top: 260px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="QLine" src="https://maps-nyc.com/img/0/q-train-map.jpg" height="400" width="1000"
+            style="transform:rotate(90deg); margin-top: 300px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="RLine" src="https://maps-nyc.com/img/0/r-train-subway-map.jpg" height="400" width="800"
+            style="transform:rotate(90deg); margin-top: 180px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="SLine"
+            src="https://new-york.metro-map.net/images/nyc-metro-route-s-42-street-franklin-avenue-rockaway-park-shuttle-map.png"
+            height="425" width="700"
+            style="transform:rotate(90deg); margin-top: 140px; display: block; margin-left: auto; margin-right: auto">
+
+        <img id="ZLine" src="https://new-york.metro-map.net/images/nyc-metro-route-z-nassau-street-express-map.png"
+            height="400" width="1000"
+            style="transform:rotate(90deg); margin-top: 350px; display: block; margin-left: auto; margin-right: auto">
+
+    </div>
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML5 Boilerplate</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <script src="scripts.js"></script>
+    </body>
+
+    </html>

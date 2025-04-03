@@ -36,6 +36,21 @@ function showImage(event, number) {
   
     console.log("You clicked area number: " + number);
   }
+
+  // in the code above nothing has changed from V1 to V2
+  // the code below is still really confusing to me but I understand that it's essentially activating the button to show as selected when clicked
   
+  document.querySelectorAll('.image-button').forEach(button => {
+    button.addEventListener('click', () => {
+
+      document.querySelectorAll('.image-button img').forEach(img => {
+        img.classList.remove('active');
+      });
   
-  
+
+      const clickedImg = button.querySelector('img');
+      if (clickedImg) {
+        clickedImg.classList.add('active');
+      }
+    });
+  });
